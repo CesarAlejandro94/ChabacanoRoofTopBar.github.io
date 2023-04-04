@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Work Sans';
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+/*MENU*/
+.contenedor-header{
+    background: #1e2326;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;    
+}
+.contenedor-header header{
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+.contenedor-header header .logo img{
+    height: 40px;    
+}
+.contenedor-header header ul{
+    display: flex;
+    list-style: none;
+}
+.contenedor-header header ul li a{
+    text-align: none;
+    color: #fff;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+}
+.contenedor-header header ul li a:hover{
+    color: #00B2AA;
+}
+.nav-responsive{
+    background-color: #F17F57;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+/*INICIO*/
+.inicio{
+    background: linear-gradient(to top, rgba(30,35,38,.6), rgba(30,35,38,1));
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.inicio video{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.inicio .contedor-banner{
+    padding: 20px;    
+    max-width: 350px;
+    margin: auto;
+    text-align: center;    
+    
+}
+.inicio .contedor-banner img{
+    margin-top: 40px;
+    display: block;
+    width: 80%;
+    margin: auto;
+    
+}
+.inicio .contedor-banner h1{
+    margin-top: 5px;
+    font-size: 40px;
+    font-family: 'Poppins';
+}
+.inicio .contedor-banner h2{
+    font-size: 15px;
+    font-weight: normal;
+}
+.inicio .contedor-banner .redes a{    
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 10px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+.inicio .contedor-banner .redes a:hover{
+    background-color: #00B2AA;
+}
+/*ESTILOS*/
+.estilos{
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 20px;
+}
+.estilos .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.estilos .fila{
+    display: flex;
+}
+.estilos .fila .col{
+    width: 50%;
+}
+.estilos .fila .col h3{
+    font-size: 30px;
+    font-family: 'Poppins';
+    margin-bottom: 25px;
+    text-align: center;
+}
+.estilos .fila .col p{
+    font: 20px;
+    line-height: 22px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+.estilos .fila .col img{
+    width: 95%;
+    height: 500px;
+    display: block;
+    margin-left: 25px;
+}
+/*HISTORIA*/
+.historia{
+    background-color: #252A2E;
+    color: #fff;
+    padding: 50px 20px;
+}
+.historia .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.historia .fila{
+    display: flex;
+}
+.historia .fila .col{
+    width: 50%;
+}
+.historia .fila .col img{
+    width: 100%;
+    height: 500px;
+    display: block;
+    
+}
+.historia .fila .col h3{
+    font-size: 30px;
+    font-family: 'Poppins';
+    margin-bottom: 25px;
+    text-align: center;
+}
+.historia .fila .col p{
+    font: 20px;
+    line-height: 22px;
+    margin-bottom: 20px;
+    text-align: justify;
+    margin-left: 25px;
+}
+/*GALERIA*/
+.galeria{
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 20px;
+}
+.galeria .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.galeria h2{
+    font-size: 48px;
+    font-family: 'Poppins';
+    text-align: center;
+    padding: 20px 0;
+}
+.galeria .galeria-seccion{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.galeria .galeria-seccion .elemento{
+    position: relative;
+    max-width: 340px;
+    height: fit-content;
+    margin: 10px;
+    cursor: pointer;
+}
+.galeria .galeria-seccion .elemento img{
+    width: 100%;
+    display: block;
+}
+.galeria .galeria-seccion .elemento .overlay{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: linear-gradient(rgba(241,127,87,.8), rgba(241,127,87,.8));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 1s;
+    font-size: 18px;
+    letter-spacing: 3px;
+    opacity: 0;
+}
+.galeria .galeria-seccion .elemento .overlay h3{
+    margin-bottom: 20px;
+    transition: 1s;
+}
+.galeria .galeria-seccion .elemento .overlay:hover{
+    opacity: 1;
+}
+.galeria .galeria-seccion .elemento .overlay:hover h3{
+    margin-bottom: 0px;
+}
+/*RESERVACIONES*/
+.reservaciones{
+    background-color: #252A2E;
+    color: #fff;
+    padding: 50px 0;
+}
+.reservaciones .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.reservaciones h2{
+    font-size: 48px;
+    font-family: 'Poppins';
+    text-align: center;
+    padding: 20px 0;
+}
+.reservaciones .fila{
+    display: flex;    
+}
+.reservaciones .fila .col{
+    width: 50%;
+    padding: 10px;
+    position: relative;
+}
+.reservaciones .col input{
+    display: block;
+    width: 100%;
+    padding: 18px;
+    border: none;
+    margin-bottom: 20px;
+    background-color: #1e2326;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+.reservaciones button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+.reservaciones button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #F17F57;
+    z-index: -1;
+    transition: 1s;
+}
+.reservaciones button:hover .overlay{
+    width: 100%;
+}
+.reservaciones iframe{
+    width: 100%;
+}
+
+/*footer*/
+footer{
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 0 30px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+footer .redes{
+    margin-bottom: 20px;
+}
+footer .redes a{
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+footer .arriba{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #F17F57;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 18px;
+}
+/*BOTON WHATSAPP*/
+.wfloat{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:40px;
+	right:40px;
+	background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+  font-size:30px;
+	box-shadow: 2px 2px 3px #999;
+  z-index:100;
+}
+.wfloat:hover {
+	text-decoration: none;
+	color: #25d366;
+  background-color:#fff;
+}
+
+.my-float{
+	margin-top:16px;
+}
+/*RESPONSIVE NAV*/
+@media screen and (max-width:980px){
+    nav{
+        display: none;
+    }
+    .nav-responsive{
+        display: block;
+    }
+    nav.responsive{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color: #252A2E;
+        width: 180px;
+    }
+    nav.responsive ul{
+        display: block !important;
+    }
+    nav.responsive ul li{
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+    }
+}
